@@ -1,7 +1,7 @@
 const cacheControl =
   values =>
   ({ res }) => {
-    if (!process.server) return;
+    if (!import.meta.server) return;
 
     const cacheControlValue = Object.entries(values)
       .map(([key, value]) => `${key}=${value}`)

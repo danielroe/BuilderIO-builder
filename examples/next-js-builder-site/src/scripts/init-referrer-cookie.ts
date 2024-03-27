@@ -53,7 +53,7 @@ export function setCookie(
   }
 }
 
-if (process.browser) {
+if (import.meta.browser) {
   // TODO: track initial UTM param(s) of some kind too?
   const referrer =
     getQueryParam(location.href, 'ref') || document.referrer || '';
